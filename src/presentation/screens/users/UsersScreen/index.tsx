@@ -31,7 +31,15 @@ export const UsersScreen: React.FC = () => {
     ) || [];
 
   useEffect(() => {
-    userService.getUsers().then((_users) => setUsers(_users));
+    userService
+      .getUsers()
+      .then((_users) => setUsers(_users))
+      .catch((error) => {
+        alert(
+          'Ocorreu um erro ao obter os usuários. Por favor, tente novamente mais tarde.'
+        );
+        console.error('Erro ao obter os usuários:', error);
+      });
   }, [users]);
 
   return (

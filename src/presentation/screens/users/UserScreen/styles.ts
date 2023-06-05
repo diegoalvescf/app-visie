@@ -39,3 +39,9 @@ export const DeleteButton = styled(ButtonComponent).attrs({
 })`
   margin-top: ${({ theme }) => theme.spacing.sm.responsive}px;
 `;
+
+export const CancelButton = styled(ButtonComponent).attrs({
+  type: EModeButton.cancel,
+})`
+  margin-top: ${({ theme }) => theme.spacing.sm.responsive}px;
+`;

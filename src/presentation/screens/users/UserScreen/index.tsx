@@ -5,12 +5,13 @@ import { Alert, KeyboardTypeOptions } from 'react-native';
 import { INPUTS, schema } from './data';
 import {
   Container,
-  DeleteButton,
+  CancelButton,
   Footer,
   Header,
   Input,
   InputList,
   SaveButton,
+  DeleteButton,
 } from './styles';
 import { UserDataRepository } from '@domain/repositories/UserRepository';
 import { UserService } from '@domain/services/UserService';
@@ -94,14 +95,18 @@ export const UserScreen: React.FC = () => {
       : handleCreateSubmit(data);
   });
 
-  const handleEdit = () => {
-    setCurrentAction('edit');
-  };
-
   const handleSave = () => {
     setCurrentAction(currentAction === 'edit' ? 'edit' : 'register');
 
     onSubmit();
+  };
+
+  const handleEdit = () => {
+    setCurrentAction('edit');
+  };
+
+  const handleCancel = () => {
+    navigate(ERouteName.UsersScreen);
   };
 
   const handleDelete = () => {
@@ -179,11 +184,17 @@ export const UserScreen: React.FC = () => {
             />
           </>
         ) : (
-          <SaveButton
-            title='Salvar'
-            onPress={handleSave}
-            loading={loading}
-          />
+          <>
+            <SaveButton
+              title='Salvar'
+              onPress={handleSave}
+              loading={loading}
+            />
+            <CancelButton
+              title='Cancelar'
+              onPress={handleCancel}
+            />
+          </>
         )}
       </Footer>
     </Container>

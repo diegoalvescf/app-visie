@@ -10,9 +10,14 @@ export const Container = styled(TouchableOpacity)<ButtonStyleProps>`
     max-height: ${theme.sizeIcon.xxl.absolute}px;
     background-color: ${type === EModeButton.create
       ? theme.colors.green_700
+      : type === EModeButton.cancel
+      ? 'transparent'
       : theme.colors.red_dark};
+    ${type === EModeButton.cancel &&
+    css`
+      border: 2px solid ${theme.colors.red_dark};
+    `}
   `}
-
   flex: 1;
   width: 100%;
 
