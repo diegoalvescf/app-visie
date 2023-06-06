@@ -57,3 +57,28 @@ npx expo start
 3. Use o aplicativo Expo Go no seu dispositivo móvel e escaneie o código QR para visualizar o aplicativo no seu dispositivo. Certifique-se de que o dispositivo móvel e a máquina estejam na mesma rede Wi-Fi.
 
 4. O aplicativo será carregado no seu dispositivo móvel através do Expo.
+
+## Demonstração
+
+- Criar registro: 
+
+![create](https://github.com/diegoalvescf/api-visie/assets/40840209/dde2ff63-5d58-4e38-ae2f-76b5fc4edd9b)
+
+- Alterar registro: 
+
+![update](https://github.com/diegoalvescf/api-visie/assets/40840209/2314a1b0-e561-4935-a39e-69b03040e830)
+
+- Cancelar ação: 
+
+![cancel](https://github.com/diegoalvescf/api-visie/assets/40840209/183135d4-fdfb-497d-8915-f08a34774e62)
+
+- Filtrar registro: 
+
+![filter](https://github.com/diegoalvescf/api-visie/assets/40840209/9d5876cc-3f4d-49f3-98c6-5464f327278f)
+
+- Deletar registro: 
+
+![delete](https://github.com/diegoalvescf/api-visie/assets/40840209/06e00fc6-d34c-4d1c-8773-da5dd8e7ed80)
+
+
+
